@@ -587,16 +587,6 @@ end
 %     % TODO: investigate if better option when one dimension is odd and the
 %     % other is even
 % end
-
-% ----- 12/10/19 - Matthew
-% Code to print autocrop coordinates to file for galfit use
-
-crop_coord_file = fopen('crop_coord.txt','w+');
-fprintf(crop_coord_file, rStart, rEnd, cStart, cEnd);
-flclose(crop_coord_file);
-
-%%%%%%%%%%%%%%
-
 img = img(rStart:rEnd, cStart:cEnd);
 fromOrigImg = fromOrigImg(rStart:rEnd, cStart:cEnd);
 imgForUsm = imgForUsm(rStart:rEnd, cStart:cEnd);
